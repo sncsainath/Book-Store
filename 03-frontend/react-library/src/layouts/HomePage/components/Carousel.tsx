@@ -97,7 +97,7 @@ export const Carousel: React.FC = () => {
             <div className="homepage-carousel-title mt-3">
                 <Link className="btn btn-outline-secondary btn-lg" to="/search">View More</Link>
                 <h1>This is the line which I am adding to the carosel component</h1>
-                <p>This is the extra line I am adding</p>
+                <p>This is the extra line I am adding,and commiting the change</p>
             </div>
         </div>
     );
