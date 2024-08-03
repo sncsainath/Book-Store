@@ -1,0 +1,17 @@
+eclipse.preferences.version=1
+org.springframework.ide.eclipse.boot.wizard.PopularityTracker.data-jpa=1
+org.springframework.ide.eclipse.boot.wizard.PopularityTracker.data-rest=1
+org.springframework.ide.eclipse.boot.wizard.PopularityTracker.lombok=1
+org.springframework.ide.eclipse.boot.wizard.PopularityTracker.mysql=1
+org.springframework.ide.eclipse.boot.wizard.PreferredSelections.artifactId=spring-boot-library
+org.springframework.ide.eclipse.boot.wizard.PreferredSelections.bootVersion=3.2.5
+org.springframework.ide.eclipse.boot.wizard.PreferredSelections.description=Spring Boot Application for React
+org.springframework.ide.eclipse.boot.wizard.PreferredSelections.groupId=com.snccreations
+org.springframework.ide.eclipse.boot.wizard.PreferredSelections.javaVersion=17
+org.springframework.ide.eclipse.boot.wizard.PreferredSelections.language=java
+org.springframework.ide.eclipse.boot.wizard.PreferredSelections.name=spring-boot-library
+org.springframework.ide.eclipse.boot.wizard.PreferredSelections.packageName=com.snccreations.spring-boot-library
+org.springframework.ide.eclipse.boot.wizard.PreferredSelections.packaging=jar
+org.springframework.ide.eclipse.boot.wizard.PreferredSelections.type=MAVEN
+org.springframework.ide.eclipse.boot.wizard.PreferredSelections.version=2.7.3
+org.springframework.ide.eclipse.boot.wizard.initializr.url=https\://start.spring.io\n

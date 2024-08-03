@@ -1,0 +1,2 @@
+INDEX VERSION 1.134+C:\Users\USER\Desktop\react project\library-app\02-backend\spring-boot-library\.metadata\.plugins\org.eclipse.jdt.core
+1865797976.index

@@ -1,0 +1,5 @@
+package com.snccreations.springbootlibrary.dao;
+
+public interface PaymentRepository {
+
+}

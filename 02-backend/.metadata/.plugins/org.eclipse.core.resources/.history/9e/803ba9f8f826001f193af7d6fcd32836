@@ -1,0 +1,5 @@
+package com.snccreations.springbootlibrary.service;
+
+public class PaymentService {
+
+}

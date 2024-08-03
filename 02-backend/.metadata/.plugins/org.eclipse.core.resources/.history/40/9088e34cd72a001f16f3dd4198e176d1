@@ -1,0 +1,44 @@
+package com.snccreations.springbootlibrary.config;
+
+import org.springframework.context.annotation.Configuration;
+import org.springframework.data.rest.core.config.RepositoryRestConfiguration;
+import org.springframework.data.rest.webmvc.config.RepositoryRestConfigurer;
+import org.springframework.http.HttpMethod;
+import org.springframework.web.servlet.config.annotation.CorsRegistry;
+
+import com.nimbusds.oauth2.sdk.Message;
+import com.snccreations.springbootlibrary.entity.Book;
+import com.snccreations.springbootlibrary.entity.Review;
+
+@Configuration
+public class MyDataRestConfig implements RepositoryRestConfigurer {
+    private static final String ALLOWED_ORIGINS = "http://13.51.160.178:3000";
+
+    @Override
+    public void configureRepositoryRestConfiguration(RepositoryRestConfiguration config, CorsRegistry cors) {
+        HttpMethod[] unsupportedActions = { HttpMethod.POST, HttpMethod.PATCH, HttpMethod.PUT, HttpMethod.DELETE };
+
+        // Expose entity IDs
+        config.exposeIdsFor(Book.class);
+        config.exposeIdsFor(Review.class);
+        config.exposeIdsFor(Message.class);
+       
+
+       
+        // Disable HTTP methods for Book, Review, and Checkout: POST, PATCH, PUT, DELETE
+        disableHttpMethods(Book.class, config, unsupportedActions);
+        disableHttpMethods(Review.class, config, unsupportedActions);
+        disableHttpMethods(Message.class, config, unsupportedActions);
+       
+
+        // Configure CORS mapping
+        cors.addMapping(config.getBasePath() + "/**").allowedOrigins(ALLOWED_ORIGINS);
+    }
+
+    private void disableHttpMethods(Class<?> clazz, RepositoryRestConfiguration config, HttpMethod[] unsupportedActions) {
+        config.getExposureConfiguration()
+              .forDomainType(clazz)
+              .withItemExposure((metadata, httpMethods) -> httpMethods.disable(unsupportedActions))
+              .withCollectionExposure((metadata, httpMethods) -> httpMethods.disable(unsupportedActions));
+    }
+}

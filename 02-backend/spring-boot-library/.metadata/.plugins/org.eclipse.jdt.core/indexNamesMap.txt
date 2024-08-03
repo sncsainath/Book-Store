@@ -1,0 +1,3 @@
+INDEX VERSION 1.134
+file:/C:/Users/USER/Desktop/react%20project/library-app/02-backend/spring-boot-library/.metadata/.plugins/org.eclipse.jdt.core/1865797976.index
+meta_index

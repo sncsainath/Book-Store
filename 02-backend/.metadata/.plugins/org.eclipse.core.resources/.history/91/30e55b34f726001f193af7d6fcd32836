@@ -1,0 +1,5 @@
+package com.snccreations.springbootlibrary.entity;
+
+public class Payment {
+
+}

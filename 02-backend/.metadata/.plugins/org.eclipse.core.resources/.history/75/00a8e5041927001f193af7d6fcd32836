@@ -1,0 +1,5 @@
+package com.snccreations.springbootlibrary.controller;
+
+public class HistoryController {
+
+}

@@ -1,0 +1,5 @@
+package com.snccreations.springbootlibrary.requestmodels;
+
+public class PaymentInfoRequest {
+
+}
