@@ -10,7 +10,7 @@ export const ExploreTopBooks = () => {
                         <h1 className='display-5 fw-bold'>Find your next adventure</h1>
                         <p className='col-md-8 fs-4'>Where would you like to go next ? </p>
                         <Link type='button' className='btn main-color btn-lg text-white' to="/search">Explore Top Books</Link>
-                        <p>This is the line which i am adding </p>
+                        <p>The man with massess </p>
                     </div>
             </div>
 
