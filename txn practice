@@ -1,0 +1,27 @@
+@Test
+void should_return_ok_on_get_transactions() {
+    // Mock a TransactionsResponse object to return from the service call
+    TransactionsResponse mockTransactionsResponse = new TransactionsResponse();
+    mockTransactionsResponse.setTokenIdentifier("mockToken");
+
+    when(service.getTransactionsV3(
+        any(), any(), any(), any(), any(), any(), any(), any(), any(), any(),
+        any(), any(), any(), any(), any(), any(), any(), any(), any(), any(),
+        any(), any(), any(), any(), any()
+    )).thenReturn(Optional.of(mockTransactionsResponse));
+
+    // Call the method under test with the appropriate parameters
+    final ResponseEntity<TransactionsResponse> response = controller.getTransactions(
+        "PARTNER_ACCOUNT_IDENTIFIER_SAMPLE", "AUTHORIZATION_SAMPLE", "AUTHORIZATION_2_SAMPLE",
+        "TRACE_ID_SAMPLE", "CHANNEL_TYPE_SAMPLE", LocalDate.parse("2023-10-08"), LocalDate.now(),
+        "", 0.0, 100.0, "sortkeyCodeSample", "sortOrderCodeSample", "transactionTypeGroupCodeSample",
+        "expenseCategoryCodeSample", "searchRequestTextSample", 10, false, false,
+        "lastSortFieldValueTextSample", "requestTypeCodeSample", false, "CLIENT_ID_HEADER_SAMPLE",
+        "onlineProfileIdentifierSample", "onlinePersonIdentifierSample", "userIdSample"
+    );
+
+    // Assertions to verify the response
+    assertEquals(HttpStatus.OK, response.getStatusCode());
+    assertNotNull(response.getHeaders().get("TOKEN_IDENTIFIER"));
+    assertEquals("mockToken", response.getHeaders().get("TOKEN_IDENTIFIER").get(0));
+}
